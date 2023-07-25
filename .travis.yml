@@ -1,12 +1,7 @@
 language: java
-sudo: true
-dist: trusty
-jdk: oraclejdk8
-install: true
-script: ./mvnw clean install
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-before_install:
-  - chmod +x mvnw
+jdk: 
+- oraclejdk8
+install: 
+- mvn install -DskipTeste=true -Dmaven.javadoc.skip=true -B -V
+script:
+- mvn teste
