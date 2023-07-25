@@ -2,6 +2,7 @@ language: java
 jdk: 
 - oraclejdk8
 install: 
+- mvn -N io.takari:maven:wrapper
 - mvn install -DskipTeste=true -Dmaven.javadoc.skip=true -B -V
 script:
 - mvn teste
